@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+</head>
+<body>
+    My 10 seconds countdown timer <br/>
+
+    <progress value="0" max="10" id="timer-countdown"></progress>
+
+    <script type="text/javascript">
+        var timeleft = 10;
+        var timer = setInterval(function() {
+            timeleft--;
+            document.getElementById("timer-countdown").value = 10 - timeleft;
+            if (timeleft <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
